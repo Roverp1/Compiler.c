@@ -28,9 +28,22 @@ typedef struct {
  TypeSeparator type; 
 } TokenSeparator;
 
+void lexer(FILE *file) {
+  char current = fgetc(file);
+
+  while (current != EOF) {
+    if (current == ';') {
+      printf("FOUND SEMICOLON\n");
+    }
+
+    // printf("%c", current);
+    current = fgetc(file);
+  }
+}
+
 int main() {
-  TokenLiteral token;
-  token.type = INT;
-  token.value = 5;
-  printf("%d\n", token.value);
+  FILE *file;
+  file = fopen("test.unn", "r");
+
+  lexer(file);
 }
