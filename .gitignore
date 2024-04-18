@@ -1,3 +1,6 @@
+# Tests
+./test.unn
+
 # Prerequisites
 *.d
 
@@ -29,6 +32,7 @@
 *.dylib
 
 # Executables
+./main
 *.exe
 *.out
 *.app
